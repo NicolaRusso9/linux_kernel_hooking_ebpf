@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/github/license/NicolaRusso9/linux_kernel_hooking_ebpf?style=flat-square)](LICENSE)
 
 <div align="right">
-  <a href="README_IT.md">English</a> | <strong>Italiano</strong>
+  <a href="README.md">English</a> | <strong>Italiano</strong>
 </div>
 
 ---
