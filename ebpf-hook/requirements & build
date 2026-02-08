@@ -1,0 +1,26 @@
+Per compilare eBPF, il compilatore deve "ricompilare" la libreria core specificamente per
+l'architettura BPF, e questo avviene tramite il flag -Z build-std, che non è ammesso nella
+versione stable.
+
+Ecco come risolvere il problema passo dopo passo:
+1. Installa il modulo Nightly
+
+Non è necessario disinstallare la versione stabile. Puoi installare la nightly affiancata:
+Bash
+
+rustup toolchain install nightly
+
+2. Aggiungi i componenti necessari
+
+Il compilatore eBPF ha bisogno del codice sorgente di Rust per poter generare il binario correttamente:
+Bash
+
+rustup component add rust-src --toolchain nightly
+
+3. Esegui la compilazione con Nightly
+
+Ora puoi eseguire lo stesso comando di prima, ma dicendo a Cargo di usare la toolchain nightly
+tramite il prefisso +nightly:
+
+BUILD COMMAND:
+cargo +nightly rustc --package ebpf-hook-pwd --bin ebpf-hook-pwd --target bpfel-unknown-none -Z build-std=core --release -- -C linker-plugin-lto

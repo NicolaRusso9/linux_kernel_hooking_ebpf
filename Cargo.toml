@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "deamon",
+    "ebpf-hook",
+    "shared",
+]
+resolver = "2"

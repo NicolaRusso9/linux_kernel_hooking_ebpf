@@ -1,0 +1,18 @@
+[package]
+name = "ebpf-hook"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+aya-ebpf = { git = "https://github.com/aya-rs/aya", branch = "main" }
+aya-log-ebpf = { git = "https://github.com/aya-rs/aya", branch = "main" }
+shared = { path = "../shared" }
+
+[profile.release]
+panic = "abort" 
+lto = true
+codegen-units = 1
+
+[[bin]]
+name = "ebpf-hook"
+path = "src/lib.rs" 

@@ -1,0 +1,14 @@
+[package]
+name = "deamon"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+aya = "0.13"
+aya-log = "0.2"
+anyhow = "1"
+tokio = { version = "1", features = ["full"] }
+shared = { path = "../shared" }
+bytes = "1.11.0"
+uzers = "0.11"
+libc = "0.2.180"
