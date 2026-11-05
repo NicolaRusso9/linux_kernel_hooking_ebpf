@@ -1,4 +1,3 @@
----
 # Kernel Hooking & Input Interception via eBPF (Rust + Aya)
 [![GitHub Stars](https://img.shields.io/github/stars/NicolaRusso9/linux_kernel_hooking_ebpf?style=flat-square&color=yellow)](https://github.com/NicolaRusso9/linux_kernel_hooking_ebpf/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/NicolaRusso9/linux_kernel_hooking_ebpf?style=flat-square&color=blue)](https://github.com/NicolaRusso9/linux_kernel_hooking_ebpf/network/members)
